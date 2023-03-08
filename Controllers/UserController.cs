@@ -7,17 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using codesquare.Context;
 using codesquare.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace codesquare.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly CodeSquareContext _context;
 
         public UserController(CodeSquareContext context)
         {
+
             _context = context;
         }
 

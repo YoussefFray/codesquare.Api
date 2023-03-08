@@ -52,4 +52,14 @@ public partial class User
     public virtual ICollection<Post> Posts { get; } = new List<Post>();
 
     public virtual ICollection<Reply> Replies { get; } = new List<Reply>();
+    public class Jwt
+    {
+        public string key { get; set; }
+        public string Issuer { get; set; }
+
+        public string Audience { get; set; }
+        public string Subject { get; set; }
+
+    }
+
 }
